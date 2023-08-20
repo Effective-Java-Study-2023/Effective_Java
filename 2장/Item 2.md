@@ -340,4 +340,16 @@ public class PizzaChoice {
 </details>
 
 * 하위 타입이란 특정 클래스나 인터페이스를 상속받거나 구현한 다른 클래스를 말한다. 
+---
+* 스프링에서는 lombok 의 @Builder 를 이용하여 빌더 패턴을 쉽게 사용할 수 있다. 
+* lombok 의 @Builder 를 클래스에 달아주면 @AllArgsConstructor 도 같이 쓰는 것과 같으므로 바람직 하지 않다. 
+* 가급적 직접 만든 생성자에 달아주도록 하자. 
+* <details><summary>설명</summary>
+   <div>
+   Finally, applying @Builder to a class is as if you added @AllArgsConstructor(access = AccessLevel.PACKAGE) to the class and applied the @Builder annotation to this all-args-constructor. This only works if you haven't written any explicit constructors yourself. If you do have an explicit constructor, put the @Builder annotation on the constructor instead of on the class. Note that if you put both @Value and @Builder on a class, the package-private constructor that @Builder wants to generate 'wins' and suppresses the constructor that @Value wants to make.  
+  
+   마지막으로, 크래스에 @Builder 를 적용하는 것은 클래스에 @AllArgsConstructor 를 추가하고 @Builder 를 적용한 것과 같다. 명시적 생성자를 직접 작성하지 않은 경우에만 작동합니다.명시적 생성자가 있는 경우 클래스 대신 생성자에 @Builder 주석을 추가합니다. @Value 와 @Builder 를 모두 클래스에 넣으면 @Builder 가 생성하려는 패키지 전용 생성자가 "승리"하고 @Value 가 만들고자하는 생성자를 억제한다. 
+   </div>
+   </details>
 
+* 빌더에 대한 설명(lombok 문서) : https://projectlombok.org/features/Builder
