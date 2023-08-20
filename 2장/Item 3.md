@@ -96,7 +96,6 @@ public calss ExampleClass {
 > 따라서 Example 인스턴스의 직렬화 형태는 아무런 실 데이터를 가질 필요가 없으니 모든 인스턴스 필드를 transient로 선언해야 함.
 사실 readResolve를 인스턴스 통제 목적으로 사용한다면 객체 참조 타입 인스턴스 필드는 모두 trandient로 선언해야 함. 
 <br>
-> 
 > MutablePeriod 공격(item 88)과 비슷한 방식으로 readResolve 메서드가 수행되기 전에 역직렬화된 객체의 참조를 공격할 여지가 남기 때문. 
 
 ```JAVA
