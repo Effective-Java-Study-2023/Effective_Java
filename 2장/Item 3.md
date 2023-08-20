@@ -98,6 +98,7 @@ public calss ExampleClass {
 <br>
 > 
 > MutablePeriod 공격(item 88)과 비슷한 방식으로 readResolve 메서드가 수행되기 전에 역직렬화된 객체의 참조를 공격할 여지가 남기 때문. 
+
 ```JAVA
 //싱글턴임을 보장해주는 readResolve 메서드
 private Object readResolve() {
