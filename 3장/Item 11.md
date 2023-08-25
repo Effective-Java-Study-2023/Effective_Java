@@ -43,7 +43,7 @@ public class Car {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
-        return Objects.equals(name, car.name);
+        return Objects.equals(name, car.name) && Objects.equals(brand, car.brand);
     }
 }
 ```
@@ -99,7 +99,7 @@ public class Car {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
-        return Objects.equals(name, car.name);
+        return Objects.equals(name, car.name) && Objects.equals(brand, car.brand);
     }
     
     @Override
@@ -203,7 +203,7 @@ PhoneNumber 인스턴스의 핵심 필드 3개를 사용해 간단한 계산을 
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
-        return Objects.equals(name, car.name);
+        return Objects.equals(name, car.name) && Objects.equals(brand, car.brand);
     }
 
     @Override
@@ -282,7 +282,7 @@ public class Car {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
-        return Objects.equals(name, car.name);
+        return Objects.equals(name, car.name) && Objects.equals(brand, car.brand);
     }
 
     @Override
