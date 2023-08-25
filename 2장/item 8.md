@@ -11,7 +11,7 @@ finalize 메소드를 재정의한 경우 즉각적으로 회수 되지 않는�
 Finalizer는 객체의 finalize 메소드를 실행한 후 메모리 정리 작업을 수행한다.
 
 자바 9에서는 finalizer가 deprecated 하였고 그 대안으로 cleaner를 소개하였다.
-![스크린샷 2023-08-24 오후 1.21.33.png](..%2F..%2F%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-08-24%20%EC%98%A4%ED%9B%84%201.21.33.png)
+![이미지](https://velog.velcdn.com/images/dkdk/post/80cd8df2-e6c6-47e6-a8b9-db6481477ed3/image.png)
 cleaner는 finalizer보다는 덜 위험하지만 , 여전히 예측할 수 없고 , 느리고 , 일반적으로 불필요하다.
 
 ### 사용을 피해야하는 이유1
@@ -44,7 +44,7 @@ AutoCloseable 인터페이스를 구현하고 close메서드를 구현하면된�
 
 ### 안전망으로 사용
 Finalizer나 Cloeaner는 자원의 소유자가 close메서드를 호출하지 않을 것에 대비한 안전망 역할이다.
-실제로 FileInputStream, FileOutputStream, ThreadPoolExcutor이 대표적으로 안전망으로 동작하는 Finalizer가 있다.
+실제로 FileInputStream, FileOutputStream, ThreadPoolExecutor이 대표적으로 안전망으로 동작하는 Finalizer가 있다.
 
 다음은 안전망으로 사용된 Cleaner 예시이다.
 ``` java
@@ -93,7 +93,7 @@ Room의 close가 호출될 때 run메서드가 호출된다.
 
 혹은 GC가 Room을 회수할 때까지 close가 호출되지 않으면 cleaner가 run메서드를 호출해줄 것이다.
 
-State인스턴스는 절대 Room인스턴스를 참조해서는 안된다.( 순환 참조로 인해 GC가 Room인스턴스를 회수하지 못함)
+State인스턴스는 절대 Room인스턴스를 참조해서는 안된다.(순환 참조로 인해 GC가 Room인스턴스를 회수하지 못함)
 ``` java
 public static void main(String[] args) throws Exception {
     try (Room myRoom = new Room(1)) {

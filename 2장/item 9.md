@@ -114,5 +114,5 @@ public class Main {
     }
 }
 ```
-![스크린샷 2023-08-25 오후 7.21.49.png](..%2F..%2F%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-08-25%20%EC%98%A4%ED%9B%84%207.21.49.png)
+![이미지](https://velog.velcdn.com/images/dkdk/post/6bd6258b-9b1f-4f11-b083-2b53fb588d26/image.png)
 아래처럼 accessResource에서 발생하는 예외가 먼저 표시되고 , suppressed에서 close메서드 호출에서 나온 예외를 볼 수 있다.
