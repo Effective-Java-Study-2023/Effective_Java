@@ -265,8 +265,9 @@ public class Car {
     private String brand;
     private int cachedHashCode;
 
-    public Car(String name) {
+    public Car(String name, String brand) {
         this.name = name;
+        this.brand = brand;
         this.cachedHashCode = computeHashCode();
     }
 
