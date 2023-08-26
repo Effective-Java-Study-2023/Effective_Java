@@ -291,39 +291,42 @@ public boolean equals(Object o) {
 
 
 1. == 연산자를 사용해 입력이 자기 자신의 참조인지 확인한다.
-2. instanceof 연산자로 입력이 올바른 타입인지 확인하낟. 
+2. instanceof 연산자로 입력이 올바른 타입인지 확인한다. 
 3. 입력을 올바른 타입으로 형변환한다. 
-4. 입력 객체와 자기 자신의 대응되는 '핵심' 필드들이 모두 일지하는지 하나씩 검사한다.
+4. 입력 객체와 자기 자신의 대응되는 '핵심' 필드들이 모두 일치하는지 하나씩 검사한다.
 
 ~~~java
 //올바른 equals  구현
-@Override
-public boolean equals(Object o) {
+public class Sample {
 
-    // 1
-    if (this == o) {
-        return true;
+    private int id;
+    private String name;
+
+    public Sample(int id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
-    // 2
-    if (!(o instanceof Point)) {
-        return false;
+    @Override
+    public boolean equals(Object o) {
+        // == 연산자를 사용해 입력이 자기 자신의 참조인지 확인한다.
+        if (this == o) {
+            return true;
+        }
+
+        // instanceof 연산자로 입력이 올바른 타입인지 확인한다.
+        if (!(o instanceof Sample)) {
+            return false;
+        }
+
+        // 입력을 올바른 타입으로 형변환한다.
+        Sample sample = (Sample) o;
+
+        // 입력 객체와 자기 자신의 대응되는 '핵심' 필드들이 모두 일치하는지 하나씩 검사한다.
+        return id == sample.id && (name != null ? name.equals(sample.name) : sample.name == null);
     }
-
-    // 3
-    Point p = (Point) o;
-
-    // 4
-    
-    // floate && double 을 제외한 기본 타입 필드는 == 연산자로 비교
-	return this.x == p.x && this.y == p.y;
-
-	// 참조 타입 필드는 equals 메서드로 비교한다. 
-	return str1.equals(str2);
-
-	// null 도 정상 값으로 취급하는 경우, 아래를 이용하여 NPE 발생을 예방하자! 
-    return Object.equals(Object, Object);
 }
+
 ~~~
 다 구현 했다면, 대칭적인지, 추이성이 있는지, 일관적인지 생각해보고, 단위 테스트로 확인하자 
 
