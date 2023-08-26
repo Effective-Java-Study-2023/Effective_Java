@@ -28,19 +28,27 @@ cleaner는 자신을 수행할 스레드를 제어할 수 있지만 백그라운
 System.gc나 System.runFinalization 역시 실행될 가능성을 높어주긴 하지만 보장하지 않는다.
 
 System.runFinalizersOnExit, Runtime.runFinalizersOnExit는 심각한 결함으로 deprecated된 상태다.
+(Java11 부터는 삭제되었다.)
 
 ### 사용을 피해야하는 이유4
 심각한 성능 문제를 동반한다. AutoCloseable객체를 만들고, try-with-resources로 수거하면 12ns가 걸린 반면 finalizer는 550ns가 걸렸다. Cleaner는 66ns로 5배 정도 느렸다.
 
 ### 사용을 피해야하는 이유5
-공격에 노출되어 심각한 보안 문제를 일으킬 수 있다. A클래스를 공격하려는 B클래스가 A클래스를 상속받고 B클래스 인스턴스를 생성하는 도중 예외가 발생하거나, 직렬화할때 예외가 생기면 죽었어야할 객체의 finalizer가 실행될 수 있다.
+finalize 공격에 노출되어 심각한 보안 문제를 일으킬 수 있다. A클래스를 공격하려는 B클래스가 A클래스를 상속받고 B클래스 인스턴스를 생성하는 도중 예외가 발생하거나, 직렬화할때 예외가 생기면 죽었어야할 객체의 finalizer가 실행될 수 있다.
 그럼 그 안에서 인스턴스의 레퍼런스를 기록할 수 있고 GC가 되지 못할 수 있다. 그 안에서 인스턴스의 메서드를 호출할 수 있다.
 예외발생시 없어져야할 인스턴스인데 Finalizer때문에 죽지 않고 살아있는 것이다.
-Final클래스는 하위클래스를 만들 수 없기 때문에 finalizer공격으로부터 방어하려면 finalize메서드를 만들고 final로 선언해야 한다. 
+Final클래스는 하위클래스를 만들 수 없기 때문에 finalizer공격으로부터 방어하려면 finalize메서드를 만들고 final로 선언해야 한다.
+
+다음은 finalizeAttack 예시코드이다.
+![](https://velog.velcdn.com/images/dkdk/post/8e63a07f-412b-4d21-bc5c-e8953951fc1e/image.png)
+![](https://velog.velcdn.com/images/dkdk/post/5f2e459e-c673-4c00-976f-34b21147f0b2/image.png)
+![](https://velog.velcdn.com/images/dkdk/post/bfb76a8a-6086-43b7-8474-2526cfec2f62/image.png)
 
 ### 자원 반납 방법
 AutoCloseable 인터페이스를 구현하고 close메서드를 구현하면된다. 예외가 발생해도 제대로 종료되도록 try-with-resources를 사용해야 한다.
 추가로 각 인스턴스가 자신이 닫혔는지를 추적하기 위해 close메서드는 이미 종료된 상태인지 확인 후 반납이 끝난 상태에서 close가 호출되면 IllegalStateException을 던진다.
+
+## 그럼 이거 왜 있나요?
 
 ### 안전망으로 사용
 Finalizer나 Cloeaner는 자원의 소유자가 close메서드를 호출하지 않을 것에 대비한 안전망 역할이다.
@@ -98,9 +106,10 @@ State인스턴스는 절대 Room인스턴스를 참조해서는 안된다.(순�
 public static void main(String[] args) throws Exception {
     try (Room myRoom = new Room(1)) {
         System.out.println("청소 하자이");
-    }  // try문의 경우 close가 호출되면서 방청소가 된다.
+    }  // try문의 경우 close가 호출되면서 방청소가 된다. 출력은 청소하자이 다음 방청소가 출력됨
     new Room(2); // 방청소가 될지 안될지 예측할 수 없다.
     System.out.println("청소 안하냐");
+    // 청소 안하냐 다음 방청소가 출력될수도 , 안될수도...
 }
 ```
 
