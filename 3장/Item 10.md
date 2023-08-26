@@ -63,7 +63,7 @@ public final class Item10 {
 
 	@Override
 	public boolean equals(Object o) {
-		if (o instanceof Item10) {  // Item10 이 o로 형 변환 된다면,
+		if (o instanceof Item10) {  // o 가 item 10 타입의 인스턴스인가?,
 			// s는 item 10 클래스의 멤버변수 이고, 이 메서드는 string 클래스의 equalsIgnoreCase 호출
 			// equals 의 파라미터 o 를 item10 으로 형 변환
 			// 형변환된 Item10 객체의 s 멤버 변수에 접근
