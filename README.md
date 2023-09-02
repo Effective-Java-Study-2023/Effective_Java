@@ -19,7 +19,7 @@
 - [x] 10. equals는 일반 규약을 지켜 재정의하라
 - [x] 11. equals를 재정의하려거든 hashCode도 재정의하라
 - [x] 12. toString을 항상 재정의하라
-- [ ] 13. clone 재정의는 주의해서 진행하라
+- [x] 13. [clone 재정의는 주의해서 진행하라](https://obtainable-poppyseed-72e.notion.site/item-13-clone-da235f49eb104e5da3dee9ae41010258?pvs=4)
 - [ ] 14. Comparable을 구현할지 고려하라
 
  <br>
