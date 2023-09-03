@@ -9,17 +9,17 @@
 - [x] 4. 인스턴스화를 막으려거든 private 생성자를 사용하라
 - [x] 5. 자원을 직접 명시하지 말고 의존 객체 주입을 사용하라
 - [x] 6. 불필요한 객체 생성을 피하라
-- [ ] 7. 다 쓴 객체 참조를 해제하라
-- [ ] 8. finalizer와 cleaner 사용을 피하라
-- [ ] 9. try-finally보다는 try-with-resources를 사용하라
+- [x] 7. 다 쓴 객체 참조를 해제하라
+- [x] 8. finalizer와 cleaner 사용을 피하라
+- [x] 9. try-finally보다는 try-with-resources를 사용하라
 
 <br>
 
 3장. 모든 객체의 공통 메서드
-- [ ] 10. equals는 일반 규약을 지켜 재정의하라
-- [ ] 11. equals를 재정의하려거든 hashCode도 재정의하라
-- [ ] 12. toString을 항상 재정의하라
-- [ ] 13. clone 재정의는 주의해서 진행하라
+- [x] 10. equals는 일반 규약을 지켜 재정의하라
+- [x] 11. equals를 재정의하려거든 hashCode도 재정의하라
+- [x] 12. toString을 항상 재정의하라
+- [x] 13. [clone 재정의는 주의해서 진행하라](https://obtainable-poppyseed-72e.notion.site/item-13-clone-da235f49eb104e5da3dee9ae41010258?pvs=4)
 - [ ] 14. Comparable을 구현할지 고려하라
 
  <br>
@@ -136,7 +136,7 @@
 
 ### 진행 방식
  - 매주 일요일 오후 9시 스터디 진행
- - 매 스터디마다 1인당 Item 2개씩 발표를 진행, 매 주마다 총 Item 6개씩 공부합니다.
+ - 매 스터디마다 1인당 Item 1개씩 발표를 진행, 매 주마다 총 Item 4개씩 공부합니다. (Item 분량에 따라 유동적으로 갯수 결정, 통상적으로 4개)
  - 스터디가 끝나고 다음 스터디에 발표할 Item을 정합니다.
  - 매 스터디 전날 자정까지 발표 자료를 PR로 올립니다.
  - 발표가 끝나고 질문 시간을 갖습니다.
