@@ -1,9 +1,9 @@
 # 아이템 31. 한정적 와일드카드를 사용해 API 유연성을 높이라
 
 ## 제네릭은 불공변
-매개변수화 타입은 불공변이다. 예를 들어 Type1과 Type2가 있을 때, List<Type1>은 List<Type2>의 하위 타입 또는 상위 타입이라는 관계가 성립될 수 없다.
+매개변수화 타입은 불공변이다. 예를 들어 Type1과 Type2가 있을 때, List<Type1<Type1>>은 List<<Type2>Type2>의 하위 타입 또는 상위 타입이라는 관계가 성립될 수 없다.
 
-List<Object>에는 어떠한 객체도 넣을 수 있지만 List<String>에는 문자열만 넣을 수 있다. 즉 List<String>이 List<Object>의 기능을 제대로 수행하지 못하므로 하위 타입이라고 말할 수 없다.
+List<<Object>Object>에는 어떠한 객체도 넣을 수 있지만 List<<String>String>에는 문자열만 넣을 수 있다. 즉 List<<String>String>이 List<Object>의 기능을 제대로 수행하지 못하므로 하위 타입이라고 말할 수 없다.
 
 이것이 와일드 카드 타입을 사용해야 하는 이유이다.
 
@@ -158,12 +158,11 @@ static class Student extends Person {
     }
 }
 ~~~
-- Student 클래스는 Person 클래스와 공통 요소를 가지고 있어 Comparable<Student>를 구현한 것이 아니라, Comparable<Person>을 구현했다.
+- Student 클래스는 Person 클래스와 공통 요소를 가지고 있어 Comparable<<Student>Student>를 구현한 것이 아니라, Comparable<<Person>Person>을 구현했다.
 - 이럴 때는 Person 객체의 비교 기준으로 max 메서드를 사용하려면 아래와 같이 선언해주어야 한다.
 ~~~Java
 public static <E extends Comparable<? super E>> E max(List<E> list);
-~~~
-
+~~~ 
 ### 메서드 선언에 타입 매개변수가 한번만 나온다면 와일드 카드를 쓰자
 메서드 선언에 타입 매개변수가 단 한번만 나온다면, 와일드 카드를 썼을 때 그 의도가 더 명확하다.
 ~~~Java
