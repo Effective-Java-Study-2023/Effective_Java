@@ -39,9 +39,11 @@ public class Stack {
 
 클라이언트는 스택에서 꺼낸 객체를 형변환해야 하는데, 이때 런타임 오류가 발생할 수 있다.
 
-![스크린샷 2023-09-24 002737.png](..%2F..%2F%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-24%20002737.png)
+![image](https://github.com/been1118/Effective_Java/assets/123082067/4266e97b-169e-4748-ae55-5f1ab09b9988)
 
-![스크린샷 2023-09-24 003201.png](..%2F..%2F%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-24%20003201.png)
+
+![image](https://github.com/been1118/Effective_Java/assets/123082067/22b35b4a-3fde-44df-954c-4da5023a842a)
+
 
 
 ## 제네릭으로
@@ -50,7 +52,8 @@ public class Stack {
 
 우선 Object를 Generic으로
 
-![스크린샷 2023-09-24 005524.png](..%2F..%2F%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-24%20005524.png)
+![image](https://github.com/been1118/Effective_Java/assets/123082067/597d5c4b-b70f-4f97-bb60-faae54f2ea60)
+
 
 Generic은 실체화할 수 없다.
 E와 같은 실체화 불가 타입으로는 배열을 만들 수 없다는 것이다.
@@ -61,7 +64,8 @@ E와 같은 실체화 불가 타입으로는 배열을 만들 수 없다는 것�
 
 배열을 Object로 생성하고 Generic으로 형 변환
 
-![스크린샷 2023-09-24 005350.png](..%2F..%2F%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-24%20005350.png)
+![image](https://github.com/been1118/Effective_Java/assets/123082067/86f240de-1bc4-4ba1-bad6-cb964ad007b1)
+
 
 배열을 E[]로 선언하여 E타입만 받음을 명시해준다. (타입 안전)
 
@@ -87,7 +91,8 @@ E와 같은 실체화 불가 타입으로는 배열을 만들 수 없다는 것�
 > b는 String list이기 때문에 String을 다뤄야 함.
 > 둘의 참조가 같음으로 꺼내는 타입이 달라질 수 있음.(a에 int를 넣고 b에서 꺼내면 String으로 꺼내야 함)
 
-![스크린샷 2023-09-24 011430.png](..%2F..%2F%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-24%20011430.png)
+![image](https://github.com/been1118/Effective_Java/assets/123082067/4b51111b-20be-410f-abb6-7e33fcf188e5)
+
 
 List<String>에서 String으로 꺼내기 때문에 컴파일은 되지만,
 실제 데이터는 int이므로 ClassCastException이 발생한다.
@@ -98,7 +103,8 @@ List<String>에서 String으로 꺼내기 때문에 컴파일은 되지만,
 
 elements의 타입을 Object[]로 바꾸고 pop에서 형변환
 
-![스크린샷 2023-09-24 015253.png](..%2F..%2F%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-24%20015253.png)
+![image](https://github.com/been1118/Effective_Java/assets/123082067/81954a00-870d-4cf8-a617-7b8f0427660c)
+
 
 방법 1과 마찬가지로 E는 실체화 불가 타입으므로 컴파일러는 런타임에 이뤄지는 형변환이 안전한지 증명할 방법이 없다.
 
