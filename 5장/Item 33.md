@@ -6,8 +6,8 @@
 
 컨테이너 대신 키를 매개변수화한 다음, 컨테이너에 값을 넣거나 뺄 때 매개변수화한 키를 함께 제공하면 제네릭 타입 시스템이 값의 타입이 키와 같음을 보장해준다.
 
-즉, 각 타입의 Class 객체를 매개변수화한 키 역할로 사용하는 것이다. class 리터럴의 타입은 Class가 아닌 Class<T>이다.
-예를 들어, String.class의 타입은 Class<String>이고 Integer.class의 타입은 Class<Integer>이다.
+즉, 각 타입의 `Class` 객체를 매개변수화한 키 역할로 사용하는 것이다. `class` 리터럴의 타입은 `Class`가 아닌 `Class<T>`이다.
+예를 들어, `String.class`의 타입은 `Class<String>`이고 `Integer.class`의 타입은 `Class<Integer>`이다.
 
     제네릭은 Set<E>, Map<K, V> 등의 컬렉션과 ThreadLocal<T>, AtomicReference<T> 등의 단일원소 컨테이너에 등에 흔히 쓰이는데, 
     이런 모든 쓰임에서 매개변수화되는 대상은 (원소가 아닌) 컨테이너 자신입니다. 따라서 하나의 컨테이너에서 매개변수화할 수 있는 타입의 수가 제한된다.
@@ -103,11 +103,11 @@ java.util.Collections의 checkedSet, checkedList, checkedMap 등이 있는데,
 
 <hr>
 
-String이나 String[]은 사용할 수 있지만 List<String>은 사용할 수 없다.
+String이나 String[]은 사용할 수 있지만 `List<String>`은 사용할 수 없다.
 
-List<String>을 사용하려는 코드는 컴파일 되지 않는다. 그 이유는 List<String>용 Class 객체를 얻을 수 없기 때문이다.
+`List<String>`을 사용하려는 코드는 컴파일 되지 않는다. 그 이유는 `List<String>`용 Class 객체를 얻을 수 없기 때문이다.
 
-List<String>.class라고 쓰면 문법 오류가 발생한다. List<String>과 List<Integer>는 List.class라는 같은 Class 객체를 공유하므로 같은 타입의 객체 참조를 반환한다면 객체 내부에서 이들을 구분할 방법이 없어진다.
+`List<String>.class`라고 쓰면 문법 오류가 발생한다. `List<String>`과 `List<Integer>`는 `List.class`라는 같은 Class 객체를 공유하므로 같은 타입의 객체 참조를 반환한다면 객체 내부에서 이들을 구분할 방법이 없어진다.
 
 이 제약에 대한 완벽히 만족스런 우회로는 없다.
 
