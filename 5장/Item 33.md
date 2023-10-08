@@ -111,6 +111,14 @@ List<String>.class라고 쓰면 문법 오류가 발생한다. List<String>과 L
 
 이 제약에 대한 완벽히 만족스런 우회로는 없다.
 
+    옮긴이에 의하면 이 제약을 슈퍼 타입 토큰으로 해결하려는 시도가 있다고 나온다. 실제로 아주 유용한 방법이라 스프링 프레임워크에서는 
+    ParameterizedTypeReference라는 클래스로 구현해놓았다고 한다. 그러나 이 또한 완벽한 방법이 아니라 그런지 책의 저자는 이 방법에 대해서 언급하지 않았다고 한다.
+    
+
+참고
+<br>
+[슈퍼 타입 토큰 방식과 원리](https://gafter.blogspot.com/2006/12/super-type-tokens.html) <br>
+[이 방식의 한계](https://gafter.blogspot.com/2007/05/limitation-of-super-type-tokens.html)
 
 ## 한정적 타입 토큰
 
@@ -182,6 +190,3 @@ static Annotation getAnnotation(AnnotatedElement element, String annotationTypeN
 또한 직접 구현한 키 타입도 쓸 수 있다. 예컨데 DB의 행(컨테이너)을 표현한 DatabaseRow 타입에는 제네릭 타입인 Column<T>를 사용할 수 있다.
 
 하지만 타입이종 컨테이너를 사용하는데 제약이 있으니 이런 제약들을 주의해서 사용하자.
-
-profile
-제롬
