@@ -54,10 +54,10 @@
 
 6장. 열거 타입과 애너테이션
 - [ ] 34. int 상수 대신 열거 타입을 사용하라
-- [ ] 35. ordinal 메서드 대신 인스턴스 필드를 사용하라
-- [ ] 36. 비트 필드 대신 EnumSet을 사용하라
+- [x] 35. [ordinal 메서드 대신 인스턴스 필드를 사용하라](https://obtainable-poppyseed-72e.notion.site/item-35-ordinal-f42d2d0a722e47299d0306caf6be4c25?pvs=4)
+- [x] 36. [비트 필드 대신 EnumSet을 사용하라](https://obtainable-poppyseed-72e.notion.site/item-36-Enumset-e37d90983d12486db5772b9a476f8a5f?pvs=4)
 - [ ] 37. ordinal 인덱싱 대신 EnumMap을 사용하라
-- [ ] 38. 확장할 수 있는 열거 타입이 필요하면 인터페이스를 사용하라
+- [x] 38. [확장할 수 있는 열거 타입이 필요하면 인터페이스를 사용하라](https://obtainable-poppyseed-72e.notion.site/item-38-ae085e6be7834fa6a1f7041ba81de3f3?pvs=4)
 - [ ] 39. 명명 패턴보다 애너테이션을 사용하라
 - [ ] 40. @Override 애너테이션을 일관되게 사용하라
 - [ ] 41. 정의하려는 것이 타입이라면 마커 인터페이스를 사용하라
