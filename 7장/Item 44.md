@@ -45,17 +45,17 @@ public class Example {
 - 
   | 인터페이스                | 함수 시그니쳐 | 의미 | 예 |
   |----------------------|---------|----|---|
-  | UnaryOperator< T >	  | T apply(T t)    | 반환값과 인수의 타입이 같은 함수, 인수는 1개	 | String::toLowerCase
+  | UnaryOperator< T >	  | T apply(T t)    | 반환값과 인수의 타입이 같은 함수, 인수는 1개	 | String::toLowerCase |
   |
-  | BinaryOperator< T >	 | T apply(T t1, T t2)    | 반환값과 인수의 타입이 같은 함수, 인수는 2개	 | BigInteger::add
+  | BinaryOperator< T >	 | T apply(T t1, T t2)    | 반환값과 인수의 타입이 같은 함수, 인수는 2개	 | BigInteger::add |
   |
-  | Predicate< T >	      | boolean test(T t)    | 한 개의 인수를 받아서 boolean을 반환하는 함수	 |  Collection::isEmpty
+  | Predicate< T >	      | boolean test(T t)    | 한 개의 인수를 받아서 boolean을 반환하는 함수	 |  Collection::isEmpty |
   |
-  | Function< T, R >	    | R apply(T t)    | 인수와 반환 타입이 다른 함수	 | Arrays::asList
+  | Function< T, R >	    | R apply(T t)    | 인수와 반환 타입이 다른 함수	 | Arrays::asList |
   |
-  | Supplier< T >	       | T get()    | 인수를 받지 않고 값을 반환, 제공하는 함수	 | Instant::now
+  | Supplier< T >	       | T get()    | 인수를 받지 않고 값을 반환, 제공하는 함수	 | Instant::now |
   |
-  | Consumer< T >        | void accept(T t)    | 한 개의 인수를 받고 반환값이 없는 함수	 | System.out::println
+  | Consumer< T >        | void accept(T t)    | 한 개의 인수를 받고 반환값이 없는 함수	 | System.out::println |
   |
   - 표준 함수형 인터페이스 대부분은 기본타입만 지원한다. 
     - 박싱된 기본 타입을 넣어서 사용하지 말자. (아이템 61)
