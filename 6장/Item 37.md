@@ -1,4 +1,4 @@
-# 아이템 37. ordinal 인덱싱 대 EnumMap을 사용하라
+# 아이템 37. ordinal 인덱싱 대신 EnumMap을 사용하라
 
 ~~~Java
 static class Plant {
