@@ -7,7 +7,7 @@
 
 ### 자바독 생성 방법 
 - javadoc 파일경로를포함하여파일명작성.java
-- 생성된 index.html 파일을 실행하면 작성한 자바독을 볼 수 있다. 
+- 생성된 index.html 파일을 실행하면 작성한 자바독  볼 수 있다. 
 ~~~java
 //예시
 javadoc src/main/java/item56/MyAdd.java
