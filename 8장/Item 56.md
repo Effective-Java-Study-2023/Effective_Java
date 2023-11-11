@@ -43,7 +43,7 @@
   - 자기 사용 패턴은 자바 8에 추가된 @implSpec 으로 문서화 한다. 
   - 해당 메서드와 하위 클래스 사이의 계약을 설명한다. 
   - 하위 클래스들이 그 메서드를 상속하거나 super 키워드로 호출할 때 그 메서드가 어떻게 동작하는지를 명확히 알려주어야 한다.
-  - 자바독 명령줄에서  -tag "implSpec:a:Implementation Requirements:" 스위치를 켜주지 않으면 @implSpec 태그를 무시하니 주의하자. 
+  - 자바독 명령줄에서  -tag "implSpec\:a:Implementation Requirements:" 스위치를 켜주지 않으면 @implSpec 태그를 무시하니 주의하자. 
 - {@literal}
   - HTML 마크업이나 자바독 태그를 무시하게 해준다. 
   - {@code} 태그랑 비슷하지만, 폰트 렌더링은 하지 않는다. 
