@@ -5,6 +5,13 @@
 - 소스코드 파일에서 문서화 주석(자바독 주석) 이라는 특수한 형태로 기술된 설명을 추려 API 문서로 변환해준다. 
 - 문서화 주석 작성 규칙은 [문서화 주석 작성법 웹사이트](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html)에 기술 되어있다. 
 
+### 자바독 생성 방법 
+- javadoc 파일경로를포함하여파일명작성.java
+- 생성된 index.html 파일을 실행하면 작성한 자바독을 볼 수 있다. 
+~~~java
+//예시
+javadoc src/main/java/item56/MyAdd.java
+~~~
 ### 문서화 주석
 ![TheExampleOfDocComment.png](img%2FTheExampleOfDocComment.png)
 - API 를 올바로 문서화 하려면 공개된 모든 클래스, 인터페이스, 메서드, 필드 선언에 문서화 주석을 달아야 한다.
@@ -43,7 +50,7 @@
   - 자기 사용 패턴은 자바 8에 추가된 @implSpec 으로 문서화 한다. 
   - 해당 메서드와 하위 클래스 사이의 계약을 설명한다. 
   - 하위 클래스들이 그 메서드를 상속하거나 super 키워드로 호출할 때 그 메서드가 어떻게 동작하는지를 명확히 알려주어야 한다.
-  - 자바독 명령줄에서  -tag "implSpec\:a\:Implementation Requirements:" 스위치를 켜주지 않으면 @implSpec 태그를 무시하니 주의하자. 
+  - 자바독 명령줄에서  -tag "implSpec:a:Implementation Requirements:" 스위치를 켜주지 않으면 @implSpec 태그를 무시하니 주의하자. 
 - {@literal}
   - HTML 마크업이나 자바독 태그를 무시하게 해준다. 
   - {@code} 태그랑 비슷하지만, 폰트 렌더링은 하지 않는다. 
@@ -79,7 +86,7 @@
 3. 자바독은 메서드 주석을 상속시킬 수 있다. 
   - 문서화 주석이 없는 API 요소를 발견하면 가장 가까운 문서화 주석을 찾아준다. 
   - 그 클래스가 구현한 '인터페이스'부터 찾는다. 
-  - {@inheritDoc}태그 사용해 상위 타입의 문서화 주석 일부를 상속할 수 있다. 
+  - {@inheritDoc}태그 사용해 상위 타입의 문서화 주석 일부를 상속₩ 수 있다. 
 
 ### 문서화 주석 주의 사항
 - 여러 클래스가 상호 작용하는 복잡한 API 인 경우 아키텍쳐 설명 시 그 문서의 링크를 주석에서 제공할 수 있다. 
