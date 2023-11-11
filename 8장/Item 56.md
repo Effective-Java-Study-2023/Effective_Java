@@ -6,7 +6,7 @@
 - 문서화 주석 작성 규칙은 [문서화 주석 작성법 웹사이트](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html)에 기술 되어있다. 
 
 ### 문서화 주석
-![TheExampleOfDocComment.png](..%2F..%2F..%2FTheExampleOfDocComment.png)
+![TheExampleOfDocComment.png](img%2FTheExampleOfDocComment.png)
 - API 를 올바로 문서화 하려면 공개된 모든 클래스, 인터페이스, 메서드, 필드 선언에 문서화 주석을 달아야 한다.
 - 직렬화할 수 있는 클래스라면 직렬화 형태에 관해서 작성해야 한다. 
 - 기본 생성자에는 문서화 주석을 달 방법이 없으니 공개 클래스는 절대 기본 생성자를 사용하면 안 된다.
@@ -66,11 +66,11 @@
     - 클래스, 인터페이스의 대상 : 그 인스턴스
     - 필드의 대상 : 필드 자신
   - 제네릭 : 제네릭 타입이나 제네릭 메서드를 문서화할 때는 모든 타입 매개변수에 주석을 달아야 한다. 
-![generic.png](..%2F..%2F..%2Fgeneric.png)
+![generic.png](img%2Fgeneric.png)
   - 열거 타입 : 열거 타입 자체, 열거 타입의 public 메서드, 상수들에도 주석을 달아야 한다.
-![enum.png](..%2F..%2F..%2Fenum.png)
+![enum.png](img%2Fenum.png)
   - 애너테이션 타입 : 애너테이션 타입 자체, 멤버들에도 모두 주석을 달고, 필드 설명은 명사구로 한다.
-![annotation.png](..%2F..%2F..%2Fannotation.png)
+![annotation.png](img%2Fannotation.png)
 
 2. API 문서화에서 자주 누락되는 설명 2가지 
   - 스레드 안전성 : 클래스 혹은 정적 메서드가 스레드 안전하든 아니든, 스레드 안전 수준을 반드시 API 설명에 기술해야 한다. 
