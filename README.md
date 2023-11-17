@@ -76,9 +76,9 @@
 <br>
 
 8장. 메서드
-- [x] 49. 매개변수가 유효한지 검사하라
+- [x] 49. [매개변수가 유효한지 검사하라](https://obtainable-poppyseed-72e.notion.site/item-49-1c9a5e09939744749ffdf851a44c5301?pvs=4)
 - [x] 50. 적시에 방어적 복사본을 만들라
-- [x] 51. 메서드 시그니처를 신중히 설계하라
+- [x] 51. [메서드 시그니처를 신중히 설계하라](https://obtainable-poppyseed-72e.notion.site/item-51-cf4b7bfdfacc4e44adad1578bb8ab29d?pvs=4)
 - [x] 52. 다중정의는 신중히 사용하라
 - [x] 53. 가변인수는 신중히 사용하라
 - [x] 54. null이 아닌, 빈 컬렉션이나 배열을 반환하라
@@ -89,7 +89,7 @@
 
 9장. 일반적인 프로그래밍 원칙
 - [x] 57. 지역변수의 범위를 최소화하라
-- [x] 58. 전통적인 for 문보다는 for-each 문을 사용하라
+- [x] 58. [전통적인 for 문보다는 for-each 문을 사용하라](https://obtainable-poppyseed-72e.notion.site/item-58-for-for-each-b534ca224ba14669914f5395a93a3166?pvs=4)
 - [ ] 59. 라이브러리를 익히고 사용하라
 - [ ] 60. 정확한 답이 필요하다면 float와 double은 피하라
 - [ ] 61. 박싱된 기본 타입보다는 기본 타입을 사용하라
