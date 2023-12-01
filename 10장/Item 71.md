@@ -75,6 +75,7 @@ API 호출자가 예외 상황에서 복구할 방법이 없는가?
 
 ---
 ![image](https://github.com/silversheep26/Effective_Java/assets/122955367/c77a6e74-fccd-4851-841b-2e4d50f269b3)
+### [출처](https://velog.io/@chullll/JAVA-%EA%B2%80%EC%82%AC%EC%98%88%EC%99%B8%EC%99%80-%EB%B9%84%EA%B2%80%EC%82%AC%EC%98%88%EC%99%B8)
 
 ### 검사 예외 
 개발자가 명시해야 하는 부분은 검사 예외인 Exception 으로 어플리케이션 수행 중 일어날 법한 예외를 검사하고 대비하는 목적으로 사용한다. 
