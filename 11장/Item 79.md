@@ -89,7 +89,8 @@ public static void main(String[] args) {
 ~~~
 
 <details><summary>ConcurrentModificationException</summary> 
-![concurrentModificationException](https://github.com/silversheep26/Effective_Java/assets/122955367/cfde8e32-d233-49ed-a926-4eef8ac85319)
+
+![concurrentModificationException](https://github.com/silversheep26/Effective_Java/assets/122955367/81d1d7bd-3631-434b-884a-9a30fd60cc93)
 
 - 동시 수정이 감지될 때 발생하는 예외
 
