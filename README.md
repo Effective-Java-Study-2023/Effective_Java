@@ -117,7 +117,7 @@
 <br>
 
 11장. 동시성
-- [x] 78. 공유 중인 가변 데이터는 동기화해 사용하라
+- [x] 78. [공유 중인 가변 데이터는 동기화해 사용하라](https://obtainable-poppyseed-72e.notion.site/item-78-e5c999b8ceea4ff0b9d3fc288eacb95b?pvs=4)
 - [x] 79. 과도한 동기화는 피하라
 - [x] 80. 스레드보다는 실행자, 태스크, 스트림을 애용하라
 - [x] 81. wait와 notify보다는 동시성 유틸리티를 애용하라
