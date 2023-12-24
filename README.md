@@ -131,7 +131,7 @@
 - [ ] 85. 자바 직렬화의 대안을 찾으라
 - [ ] 86. Serializable을 구현할지는 신중히 결정하라
 - [ ] 87. 커스텀 직렬화 형태를 고려해보라
-- [ ] 88. readObject 메서드는 방어적으로 작성하라
+- [x] 88. readObject 메서드는 방어적으로 작성하라
 - [x] 89. [인스턴스 수를 통제해야 한다면 readResolve보다는 열거 타입을 사용하라](https://obtainable-poppyseed-72e.notion.site/item-89-readResolve-fc295b9e0056456a96fa40cbf085abfe?pvs=4)
 - [ ] 90. 직렬화된 인스턴스 대신 직렬화 프록시 사용을 검토하라
 
