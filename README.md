@@ -123,7 +123,7 @@
 - [x] 81. wait와 notify보다는 동시성 유틸리티를 애용하라
 - [x] 82. 스레드 안전성 수준을 문서화하라
 - [x] 83. 지연 초기화는 신중히 사용하라
-- [x] 84. 프로그램의 동작을 스레드 스케줄러에 기대지 말라
+- [x] 84. [프로그램의 동작을 스레드 스케줄러에 기대지 말라](https://obtainable-poppyseed-72e.notion.site/item-84-d17bfb9ee55b42ba9c171f2883741d1a?pvs=4)
 
 <br>
 
@@ -132,7 +132,7 @@
 - [ ] 86. Serializable을 구현할지는 신중히 결정하라
 - [ ] 87. 커스텀 직렬화 형태를 고려해보라
 - [ ] 88. readObject 메서드는 방어적으로 작성하라
-- [ ] 89. 인스턴스 수를 통제해야 한다면 readResolve보다는 열거 타입을 사용하라
+- [x] 89. [인스턴스 수를 통제해야 한다면 readResolve보다는 열거 타입을 사용하라](https://obtainable-poppyseed-72e.notion.site/item-89-readResolve-fc295b9e0056456a96fa40cbf085abfe?pvs=4)
 - [ ] 90. 직렬화된 인스턴스 대신 직렬화 프록시 사용을 검토하라
 
 ### 진행 방식
